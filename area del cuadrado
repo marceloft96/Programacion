@@ -1,0 +1,18 @@
+// area del cuadrado.cpp : Defines the entry point for the console application.
+//NOMBRE:MARCELO FERNANDEZ TELLEZ
+//FECHA: 27-08-15
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+void main ()
+{float l,a;
+cout<<"ingrese el lado del cuadrado";
+cin>>l;
+a=l*l;
+cout<<"el area del cuadrado es :" <<a<<endl;
+}
+
+
