@@ -1,0 +1,22 @@
+
+// Nombre:area del triangulo	
+// Autor:marcelo fernandez tellez
+// Fecha:3-09-15
+
+#include "stdafx.h"//libreria
+#include "conio.h"//libreria
+#include <iostream>//libreria
+
+using namespace std;
+//para que la entrada del programa sea el teclado y la salida el monitor
+void main()
+{
+   float A,B,H; // mostramos las variables con las que vamos a trabjar
+   cout<<"Ingrese base: ";// variable 1
+   cin>>B;// asignar un numero a la variable 1
+   cout<<"Ingrese altura: ";// variablle 2
+   cin>>H;//asignar un numero a la variable 2
+   A=(B*H)/2; //ecuacion con la que vamos a trabajar
+   cout<<"El area es: "<<A; // resultado de toda la operiacion mostrado en variable A
+   getch(); //pausa al programa
+}
