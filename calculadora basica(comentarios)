@@ -1,0 +1,34 @@
+//nombre: suma y operaciones
+//autor : marcelo fernandez tellez- oscar diego ortiz
+//fecha: 03-09-15
+//objetivos:este programa es la base de una simple calculadora que realiza operaciones basicas 
+#include "stdafx.h"
+#include <iostream>//libreria (visual c++)
+#include "conio.h"//librerias (entrada y salida)
+using namespace std;//para que la entrada sea el teclado y la salida el monitor
+int main(){ //estructura del programa
+int a;//declaracion de variables
+int b;//declaracion de variables
+int c;//declaracion de variables
+int d;//declaracion de variables
+int e;//declaracion de variables
+float f;//declaracion de variables con decimales
+int g;//vaiables 
+cout <<"ingrese el primer numero"<< endl;
+cin >> a; //constante 1
+cout <<"ingrese el segundo numero"<< endl;
+cin >> b;//constante 2 
+c = a+b;// operaciones 
+d = a-b;//operaciones
+e = a*b;//operaciones
+f = a/b;//operacionez
+g = a%b;//operaciones
+cout <<"la suma; " << c << endl;//salida de datos
+cout <<"la resta es; " << d << endl;//salida de datos
+cout <<"la multiplicaciobn es; " << e << endl;//salida de datos
+cout <<"la division es; " << f << endl;//salida de datos
+cout <<"el residuo es; " << g << endl;//salida de datos
+getch();//pausa el programa
+return 0; //returna un valor
+}
+//finaliza el cuerpo del programa
