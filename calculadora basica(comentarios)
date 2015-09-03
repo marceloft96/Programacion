@@ -2,6 +2,7 @@
 //autor : marcelo fernandez tellez- oscar diego ortiz
 //fecha: 03-09-15
 //objetivos:este programa es la base de una simple calculadora que realiza operaciones basicas 
+//nueva instruccion: "porcentaje" es la funcion que nos permite conseguir el residuo de dos variables 
 #include "stdafx.h"
 #include <iostream>//libreria (visual c++)
 #include "conio.h"//librerias (entrada y salida)
