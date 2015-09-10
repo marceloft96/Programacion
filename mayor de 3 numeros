@@ -1,0 +1,35 @@
+// votacion.cpp : Defines the entry point for the console application.
+// marcelo fernandez tellez
+// fecha : 10-09-15		
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+ using namespace std;
+
+void  main()
+{
+float x,y,z;
+	cout<< "ingrese el  numero x: ";
+	cin>>x;
+	cout<< "ingrese el numero y: ";
+	cin>>y;	
+	cout<<  "ingrese el numero z: ";	
+	cin>>z;
+	    if (x>y) 
+		   if (x>z)
+              cout<< " el mayor es x: ";
+		   else 
+			  cout<< "el mayor es z:";
+		
+	    else 
+		   if (y>z) 
+			  cout<< " el mayor es y:";
+		   else  
+			  cout<< " el mayor es z:";
+
+	
+	
+	getch();		
+	}
+
