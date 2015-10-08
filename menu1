@@ -1,0 +1,92 @@
+// potencia.cpp : Defines the entry point for the console application.
+//Nombre:Marcelo Fernandez Tellez  Fecha:8-10-15
+
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+
+using namespace std;
+
+float potencia(float b, float e);
+float sumatoria(float N);
+float area (float r);
+
+void main()
+
+{
+	float Potencia, base, exponente, Sumatoria, numero, Area, radio;
+	int opcion;
+
+	do{
+		cout<<"\t\t Menu \n";
+		cout<<"\t\t ==== \n";
+		cout<<"1. Potencia\n";
+		cout<<"2. Sumatoria\n";
+		cout<<"3. Area del Circulo\n";
+		cout<<"0. Salir\n";
+		cout<<"Opcion: ";
+		cin>>opcion;
+		switch (opcion)
+		{
+		case 1: cout<<"Ingrese la base: ";
+				cin>>base;
+				cout<<"Ingrese el exponente: ";
+				cin>>exponente;
+				Potencia=potencia(base,exponente);
+				cout<<"La potencia es: "<<Potencia;
+				break;
+
+		case 2: cout<<"Ingrese el numero: ";
+				cin>>numero;
+				Sumatoria=sumatoria(numero);
+				cout<<"La sumatoria es: "<<sumatoria(numero);
+				break;
+
+		case 3: cout<<"Ingrese el radio: ";
+				cin>>radio;
+				Area=area(radio);
+				cout<<"El area es: "<<area(radio);
+				break;
+
+		case 0: cout<<"Saliendo del menu";
+				break;
+
+		default: cout<<"ERROR de opcion";
+				break;
+
+
+		}
+		getch();
+		system ("cls");
+
+	}while (opcion=!0);
+	getch();
+}
+
+float potencia(float b, float e)
+{float acum;
+acum=1;
+	for(int i=1; i<=e; i++)
+		acum=acum*b;
+	return acum;
+}
+float sumatoria(float N)
+{int s=0; int i=1;
+for (int i=1; i<=N; i++);
+s=s+i;
+	return s;
+}
+float area (float r)
+{float resultado;
+
+resultado=(3.1416*(r*r));
+return resultado;
+}
+
+
+
+
+
+
+
+
