@@ -1,0 +1,60 @@
+// promedio.cpp : Defines the entry point for the console application.
+//marcelo fernandez tellez 15-10-15
+
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "stdlib.h"
+#include "Math.h"
+
+using namespace std;
+
+float promedio(int p);
+float raiz(float dato);
+int sumar(int N, int S, int d);
+
+void main()
+{
+	float Promedio,p;
+	int opcion;
+	// Menu
+	do {
+		//Desplegar las opciones
+		cout<<"\t\t Menu \n";
+		cout<<"\t\t ==== \n";
+		cout<<"1. Promedio\n";
+		cout<<"2. Raiz Cuadrada\n";
+		cout<<"3. suma\n";
+		cout<<"0. Salir\n";
+		cout<<"Opcion: ";
+		cin>>opcion;
+		// Condicional multiple
+		switch (opcion)
+		{
+		case 1: cout<<"Ingrese los numeros a calcular su promedio:";
+			    cin>> p;
+				Promedio=promedio(p);
+				cout<<"El promedio es: "<<Promedio;
+				break;
+		default: cout <<"ERROR de opcion";
+			    break;
+		}
+		getch();
+		system("cls");
+	}while (opcion!=0);
+	getch();
+	
+}
+
+float promedio(int p)
+{
+  float s=0;
+  float dato;
+  for (int i=1;i<=p;i++)
+	  {cout<<"ingrese el numero"<<i<<" :";
+		cin>>dato;
+		s=s+dato;
+	  }
+  return s/p;
+
