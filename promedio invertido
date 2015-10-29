@@ -1,0 +1,54 @@
+// vectores.cpp : Defines the entry point for the console application.
+//marcelo fernandez tellez 29-10-15
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#define MAX 100
+
+using namespace std;
+
+void cargar (double a[], int tamanio);
+void mostrar (double a[], int tamanio);
+void invertir (double a[], int tamanio);
+
+void main()
+
+{
+int N;
+double A[MAX], prom;
+
+	do
+	{cout<<"Ingrese el numero de elementos del vector (Max 100): "<<endl;
+	cin>> N;
+	}while ((N<=0) || (N>100));
+	cargar(A,N);
+	invertir(A,N);
+	mostrar(A,N);
+
+getch();
+}
+
+void cargar (double a[], int tamanio)
+{	int i;
+	for (i=0;i<tamanio;i++)
+	{cout<<"Ingrese a["<<i<<"]: "<<endl;
+	cin>>a[i];
+	}
+}
+
+
+void mostrar (double a[], int tamanio)
+{	for (int i=0;i<tamanio;i++)
+	{cout<<"El vector a["<<i<<"] es: "<<a[i]<<endl;
+	}
+}
+
+void invertir (double a[], int tamanio)
+{
+	int aux;
+	for (int i=0;i<tamanio/2;i++)
+	{aux=a[i];
+	a[i]=a[tamanio-1-i];
+	a[tamanio-1-i]=aux;
+	}
