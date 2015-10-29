@@ -1,0 +1,56 @@
+// vectores.cpp : Defines the entry point for the console application.
+//marcelo fernandez tellez 29-10-15
+
+#include "stdafx.h"
+#include <iostream>		
+#include "conio.h"
+#define MAX 100
+ 
+using namespace std;
+ 
+double promedio(double a[], int tamanio );
+void cargar (double a[],int tamanio);
+void mostrar ( double a[],int tamanio);
+
+void main()
+{
+	int N;
+	double a[MAX],prom;
+do
+   {
+	    cout<<"ingrese el numero de elementos maximo 100 :";
+	    cin>> N;
+}
+    while ((N<=0)|| (N>100));
+    cargar (a,N);
+    prom= promedio (a,N);
+    mostrar (a,N);
+    cout<<"el promedio es :" <<prom ;
+ getch();
+}
+void cargar (double a[], int tamanio)
+  {
+    for (int i=0;i<tamanio ;i++)
+   {
+	 cout<<"a[ "<<i<<"]:";
+	 cin >>a[i];
+   }
+
+ }
+ 
+double promedio ( double a[], int tamanio )
+ {
+	 double p, suma =0;
+	 for (int i=0; i<tamanio ; i++)
+	 	 suma=suma +a[i];
+		 p=suma/tamanio;
+		
+	    return p;
+ }
+ 
+void mostrar (double a[] , int tamanio )
+ {
+	 for(int i=0 ; i<tamanio ; i++)
+		 cout <<"a["<<i<<"]: " <<a[i]<<
+		 endl;
+ }
